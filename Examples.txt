@@ -1,0 +1,150 @@
+DID YOU EVER HEAR THE TRAGEDY OF DARTH PLAGUEIS THE WISE Bubble sort example
+THIS IS WHERE THE FUN BEGINS
+    JEDI arr[5] YOU ARE ON THIS COUNCIL {42, 15, 8, 99, 23};
+    JEDI i;
+    JEDI j;
+    JEDI temp;
+
+    HELLO THERE ("Unsorted array:\n");
+    I WANT MORE (i YOU ARE ON THIS COUNCIL 0; i < 5; i NOW THERE ARE TWO OF THEM)
+        HELLO THERE ("%d ", arr[i]);
+    ANOTHER HAPPY ENDING
+    HELLO THERE ("\n");
+
+    I WANT MORE (i YOU ARE ON THIS COUNCIL 0; i < 4; i NOW THERE ARE TWO OF THEM)
+        I WANT MORE (j YOU ARE ON THIS COUNCIL 0; j < 4 - i; j NOW THERE ARE TWO OF THEM)
+            YOU WERE THE CHOSEN ONE (arr[j] > arr[j + 1])
+                temp YOU ARE ON THIS COUNCIL arr[j];
+                arr[j] YOU ARE ON THIS COUNCIL arr[j + 1];
+                arr[j + 1] YOU ARE ON THIS COUNCIL temp;
+            ANOTHER HAPPY ENDING
+        ANOTHER HAPPY ENDING
+    ANOTHER HAPPY ENDING
+
+    HELLO THERE ("Sorted array (Bubble Sort):\n");
+    I WANT MORE (i YOU ARE ON THIS COUNCIL 0; i < 5; i NOW THERE ARE TWO OF THEM)
+        HELLO THERE ("%d ", arr[i]);
+    ANOTHER HAPPY ENDING
+    HELLO THERE ("\n");
+ANOTHER HAPPY ENDING
+
+
+DID YOU EVER HEAR THE TRAGEDY OF DARTH PLAGUEIS THE WISE Age trial example
+THIS IS WHERE THE FUN BEGINS
+    JEDI age;
+
+    HELLO THERE ("Enter your age, young Padawan:\n");
+    GENERAL KENOBI ("%d", &age);
+
+    YOU WERE THE CHOSEN ONE (age >= 18)
+        HELLO THERE ("You are ready to face the trials!\n");
+    YOU WERE SUPPOSED TO DESTROY THE SITH
+        HELLO THERE ("You are still a youngling.\n");
+    ANOTHER HAPPY ENDING
+ANOTHER HAPPY ENDING
+
+
+DID YOU EVER HEAR THE TRAGEDY OF DARTH PLAGUEIS THE WISE Recursive factorial example
+KILL HIM (JEDI factorial(JEDI n))
+    YOU WERE THE CHOSEN ONE (n YOU ARE SHORTER THAN I EXPECTED 2)
+        DO IT 1;
+    ANOTHER HAPPY ENDING
+
+    DO IT n * KILL HIM NOW factorial(n - 1);
+ANOTHER HAPPY ENDING
+
+THIS IS WHERE THE FUN BEGINS
+    JEDI num YOU ARE ON THIS COUNCIL 5;
+    JEDI result;
+
+    result YOU ARE ON THIS COUNCIL KILL HIM NOW factorial(num);
+    HELLO THERE ("Factorial of 5 is: %d\n", result);
+ANOTHER HAPPY ENDING
+
+
+DID YOU EVER HEAR THE TRAGEDY OF DARTH PLAGUEIS THE WISE Recursive binary search example
+KILL HIM (JEDI binarySearch(JEDI arr[], JEDI l, JEDI r, JEDI x))
+    YOU WERE THE CHOSEN ONE (r THERE IS ALWAYS A BIGGER FISH l)
+        JEDI mid YOU ARE ON THIS COUNCIL l + (r - l) // 2;
+
+        YOU WERE THE CHOSEN ONE (arr[mid] YOU ARE A BOLD ONE x)
+            DO IT mid;
+        ANOTHER HAPPY ENDING
+
+        YOU WERE THE CHOSEN ONE (arr[mid] THERE IS ALWAYS A BIGGER FISH x)
+            DO IT KILL HIM NOW binarySearch(arr, l, mid - 1, x);
+        ANOTHER HAPPY ENDING
+
+        DO IT KILL HIM NOW binarySearch(arr, mid + 1, r, x);
+    ANOTHER HAPPY ENDING
+
+    DO IT -1;
+ANOTHER HAPPY ENDING
+
+THIS IS WHERE THE FUN BEGINS
+    JEDI arr[5] YOU ARE ON THIS COUNCIL {10, 20, 30, 40, 50};
+    JEDI n YOU ARE ON THIS COUNCIL 5;
+    JEDI target YOU ARE ON THIS COUNCIL 40;
+    JEDI result;
+
+    result YOU ARE ON THIS COUNCIL KILL HIM NOW binarySearch(arr, 0, n - 1, target);
+
+    YOU WERE THE CHOSEN ONE (result != -1)
+        HELLO THERE ("Element found at index %d!\n", result);
+    YOU WERE SUPPOSED TO DESTROY THE SITH
+        HELLO THERE ("Element not found in the archives.\n");
+    ANOTHER HAPPY ENDING
+ANOTHER HAPPY ENDING
+
+
+DID YOU EVER HEAR THE TRAGEDY OF DARTH PLAGUEIS THE WISE Input, decision, and loop example
+THIS IS WHERE THE FUN BEGINS
+    JEDI limit;
+    JEDI counter;
+
+    HELLO THERE ("Enter a positive limit: ");
+    GENERAL KENOBI ("%d", &limit);
+
+    YOU WERE THE CHOSEN ONE (limit > 0)
+        HELLO THERE ("Counting: ");
+        I WANT MORE (counter YOU ARE ON THIS COUNCIL 1; counter <= limit; counter NOW THERE ARE TWO OF THEM)
+            HELLO THERE ("%d ", counter);
+        ANOTHER HAPPY ENDING
+        HELLO THERE ("\n");
+    YOU WERE SUPPOSED TO DESTROY THE SITH
+        HELLO THERE ("The limit must be positive.\n");
+    ANOTHER HAPPY ENDING
+ANOTHER HAPPY ENDING
+
+
+DID YOU EVER HEAR THE TRAGEDY OF DARTH PLAGUEIS THE WISE Greatest common divisor function
+KILL HIM (JEDI greatestCommonDivisor(JEDI a, JEDI b))
+    JEDI remainder;
+
+    THIS IS GETTING OUT OF HAND (b != 0)
+        remainder YOU ARE ON THIS COUNCIL a % b;
+        a YOU ARE ON THIS COUNCIL b;
+        b YOU ARE ON THIS COUNCIL remainder;
+    ANOTHER HAPPY ENDING
+
+    DO IT a;
+ANOTHER HAPPY ENDING
+
+THIS IS WHERE THE FUN BEGINS
+    JEDI result YOU ARE ON THIS COUNCIL KILL HIM NOW greatestCommonDivisor(48, 18);
+    HELLO THERE ("GCD of 48 and 18 is: %d\n", result);
+ANOTHER HAPPY ENDING
+
+
+DID YOU EVER HEAR THE TRAGEDY OF DARTH PLAGUEIS THE WISE Recursive Fibonacci function
+KILL HIM (JEDI fibonacci(JEDI n))
+    YOU WERE THE CHOSEN ONE (n YOU ARE SHORTER THAN I EXPECTED 2)
+        DO IT n;
+    YOU WERE SUPPOSED TO DESTROY THE SITH
+        DO IT KILL HIM NOW fibonacci(n - 1) + KILL HIM NOW fibonacci(n - 2);
+    ANOTHER HAPPY ENDING
+ANOTHER HAPPY ENDING
+
+THIS IS WHERE THE FUN BEGINS
+    HELLO THERE ("Fibonacci number 10 is: %d\n", KILL HIM NOW fibonacci(10));
+ANOTHER HAPPY ENDING

@@ -1,0 +1,394 @@
+/* Shared layout and theme styles for the IDE and language guide pages. */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.ide-header {
+  height: 50px;
+  background-color: #252526;
+  border-bottom: 1px solid #3c3c3c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.ide-header h1 {
+  font-size: 1.2rem;
+  color: #4ec9b0;
+}
+
+.header-link {
+  color: #9cdcfe;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.header-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+#run-btn {
+  background-color: #0e639c;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#run-btn:hover {
+  background-color: #1177bb;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#stop-btn {
+  background-color: #a1260d;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#stop-btn:hover:not(:disabled) {
+  background-color: #c5371c;
+}
+
+button:disabled,
+input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Full-width and height split container */
+.ide-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+/* Left side takes 40%, Right side takes 60% */
+.left-panel {
+  width: 40%;
+  border-right: 1px solid #3c3c3c;
+  background-color: #252526;
+}
+
+.right-panel {
+  width: 60%;
+  background-color: #1e1e1e;
+}
+
+.panel-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.source-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.source-toolbar > label {
+  margin-bottom: 0.3rem;
+}
+
+.example-picker-label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #b8b8b8;
+  font-size: 0.8rem;
+}
+
+#example-picker {
+  max-width: 230px;
+  padding: 0.4rem 0.55rem;
+  border: 1px solid #3c3c3c;
+  border-radius: 4px;
+  background: #181818;
+  color: #d4d4d4;
+  font-family: inherit;
+}
+
+#example-picker:focus {
+  border-color: #007acc;
+  outline: none;
+}
+
+.terminal-section {
+  flex: 1.4;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #9cdcfe;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border: 1px solid #3c3c3c;
+  border-radius: 4px;
+  padding: 0.75rem;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.95rem;
+  resize: none;
+  outline: none;
+}
+
+.left-panel textarea {
+  background-color: #181818;
+}
+
+textarea:focus {
+  border-color: #007acc;
+}
+
+#stdout-output {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 0.75rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background-color: #181818;
+  border: 1px solid #3c3c3c;
+  border-radius: 4px;
+  color: #d4d4d4;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.95rem;
+}
+
+#terminal-form {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.terminal-prompt {
+  margin: 0;
+  color: #4ec9b0;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+#terminal-input {
+  min-width: 0;
+  flex: 1;
+  padding: 0.55rem;
+  background-color: #181818;
+  color: #d4d4d4;
+  border: 1px solid #3c3c3c;
+  border-radius: 4px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.95rem;
+}
+
+#send-input-btn {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #3c3c3c;
+  border-radius: 4px;
+  background: #333333;
+  color: #d4d4d4;
+  cursor: pointer;
+}
+
+#monaco-editor-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #3c3c3c;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+body.guide-page {
+  height: 100%;
+  min-height: 100%;
+  overflow: auto;
+}
+
+.guide-content {
+  width: min(100% - 2rem, 1100px);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+  line-height: 1.6;
+}
+
+.guide-intro {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.guide-intro h2 {
+  margin: 0.3rem 0 0.75rem;
+  color: #ffffff;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.guide-intro p,
+.guide-section > p,
+.reference-card p {
+  color: #b8b8b8;
+}
+
+.eyebrow {
+  color: #4ec9b0 !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.guide-section {
+  margin: 1.5rem 0;
+  padding: 1.4rem;
+  background: #252526;
+  border: 1px solid #3c3c3c;
+  border-radius: 8px;
+}
+
+.guide-section h2 {
+  margin-bottom: 0.5rem;
+  color: #4ec9b0;
+}
+
+.guide-section h3 {
+  margin: 1rem 0 0.4rem;
+  color: #9cdcfe;
+}
+
+.table-wrap {
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.guide-content table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.guide-content th,
+.guide-content td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid #3c3c3c;
+  vertical-align: top;
+}
+
+.guide-content th {
+  color: #9cdcfe;
+}
+
+.guide-content code {
+  color: #d7ba7d;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.guide-content pre {
+  margin: 0.75rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+  background: #181818;
+  border: 1px solid #3c3c3c;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+.guide-content pre code {
+  color: #d4d4d4;
+  white-space: pre;
+}
+
+.reference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.reference-card {
+  min-width: 0;
+}
+
+.reference-card h3 {
+  margin-top: 0;
+}
+
+.guide-footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+.guide-footer a {
+  color: #4ec9b0;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  html, body {
+    overflow: auto;
+    min-height: 100%;
+  }
+
+  .ide-container {
+    height: auto;
+    min-height: calc(100vh - 50px);
+    flex-direction: column-reverse;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+
+  .left-panel {
+    min-height: 60vh;
+    border-right: 0;
+    border-top: 1px solid #3c3c3c;
+  }
+
+  .right-panel {
+    height: 60vh;
+  }
+}

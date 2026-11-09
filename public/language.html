@@ -1,0 +1,155 @@
+<!-- Reference page describing PrequelScript syntax, types, operators, and examples. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrequelScript Language Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="guide-page">
+  <header class="ide-header">
+    <h1>PrequelScript Language Guide</h1>
+    <nav class="header-actions" aria-label="Main navigation">
+      <a class="header-link" href="/">Back to IDE</a>
+    </nav>
+  </header>
+
+  <main class="guide-content">
+    <section class="guide-intro">
+      <p class="eyebrow">A Star Wars-themed language compiled to Python</p>
+      <h2>Write programs in PrequelScript</h2>
+      <p>
+        PrequelScript uses memorable phrases in place of familiar programming
+        constructs. The compiler translates supported programs to Python and
+        runs them in the IDE terminal.
+      </p>
+    </section>
+
+    <section class="guide-section">
+      <h2>Operators</h2>
+      <p>These phrases replace common operators. The usual symbols shown in the last column are also accepted.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>PrequelScript phrase</th><th>Meaning</th><th>Python equivalent / symbol</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>YOU ARE ON THIS COUNCIL</code></td><td>Assignment</td><td><code>=</code></td></tr>
+            <tr><td><code>YOU ARE A BOLD ONE</code></td><td>Equal to</td><td><code>==</code></td></tr>
+            <tr><td><code>THERE IS ALWAYS A BIGGER FISH</code></td><td>Greater than</td><td><code>&gt;</code></td></tr>
+            <tr><td><code>YOU ARE SHORTER THAN I EXPECTED</code></td><td>Less than</td><td><code>&lt;</code></td></tr>
+            <tr><td><code>NOW THERE ARE TWO OF THEM</code></td><td>Increment by one</td><td><code>+= 1</code> (prefix or postfix)</td></tr>
+            <tr><td><code>WE ARE STILL FLYING HALF A SHIP</code></td><td>Decrement by one</td><td><code>-= 1</code> (prefix or postfix)</td></tr>
+            <tr><td><code>NOOOO</code></td><td>Logical negation</td><td><code>not</code> (or <code>!</code>)</td></tr>
+            <tr><td><code>PERHAPS THE ARCHIVES ARE INCOMPLETE</code></td><td>Else-if branch</td><td><code>elif</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Other supported expression operators</h3>
+      <p>
+        Arithmetic uses <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>,
+        <code>//</code>, and <code>%</code>. Comparisons also include
+        <code>!=</code>, <code>&gt;=</code>, and <code>&lt;=</code>. Use
+        <code>&amp;&amp;</code> and <code>||</code> for logical AND and OR; these
+        compile to Python's <code>and</code> and <code>or</code>.
+      </p>
+    </section>
+
+    <section class="guide-section">
+      <h2>Program structure and control flow</h2>
+      <div class="reference-grid">
+        <article class="reference-card">
+          <h3>Program</h3>
+          <pre><code>THIS IS WHERE THE FUN BEGINS
+    HELLO THERE ("Hello, galaxy!");
+ANOTHER HAPPY ENDING</code></pre>
+        </article>
+        <article class="reference-card">
+          <h3>Conditional</h3>
+          <pre><code>YOU WERE THE CHOSEN ONE (score &gt;= 10)
+    HELLO THERE ("Pass");
+PERHAPS THE ARCHIVES ARE INCOMPLETE (score &gt; 5)
+    HELLO THERE ("Almost");
+YOU WERE SUPPOSED TO DESTROY THE SITH
+    HELLO THERE ("Try again");
+ANOTHER HAPPY ENDING</code></pre>
+        </article>
+        <article class="reference-card">
+          <h3>Loops</h3>
+          <pre><code>I WANT MORE (JEDI i YOU ARE ON THIS COUNCIL 0; i &lt; 3; i NOW THERE ARE TWO OF THEM)
+    HELLO THERE ("%d\n", i);
+ANOTHER HAPPY ENDING
+
+THIS IS GETTING OUT OF HAND (keepGoing)
+    DONT TRY IT;
+ANOTHER HAPPY ENDING</code></pre>
+          <p><code>UNLIMITED POWAH</code> starts an infinite loop. Use <code>DONT TRY IT</code> to break and <code>YOU UNDERESTIMATE MY POWER</code> to continue.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section">
+      <h2>Types, functions, and input/output</h2>
+      <p>
+        Type phrases are accepted for declarations and function signatures. They
+        describe the source program; Python does not enforce C-style widths or
+        signedness.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Type phrase</th><th>Intended type</th></tr></thead>
+          <tbody>
+            <tr><td><code>JEDI</code></td><td>Integer</td></tr>
+            <tr><td><code>YOUNGLING</code></td><td>Short integer</td></tr>
+            <tr><td><code>MASTER</code></td><td>Long integer</td></tr>
+            <tr><td><code>MASTER YODA</code></td><td>Character</td></tr>
+            <tr><td><code>WOOKIEE</code></td><td>Text string</td></tr>
+            <tr><td><code>MASTER JEDI</code></td><td>Double-precision number</td></tr>
+            <tr><td><code>I HATE SAND</code></td><td>Floating-point number</td></tr>
+            <tr><td><code>HIGH GROUND JEDI</code></td><td>Unsigned integer (source-language intent)</td></tr>
+            <tr><td><code>SITH</code></td><td>Void / no value</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="reference-grid">
+        <article class="reference-card">
+          <h3>Function</h3>
+          <pre><code>KILL HIM (JEDI doubleIt(JEDI value))
+    DO IT value * 2;
+ANOTHER HAPPY ENDING
+
+THIS IS WHERE THE FUN BEGINS
+    HELLO THERE ("%d", KILL HIM NOW doubleIt(6));
+ANOTHER HAPPY ENDING</code></pre>
+        </article>
+        <article class="reference-card">
+          <h3>Terminal input</h3>
+          <pre><code>THIS IS WHERE THE FUN BEGINS
+    JEDI age;
+    HELLO THERE ("Age? ");
+    GENERAL KENOBI ("%d", &amp;age);
+    HELLO THERE ("Age: %d\n", age);
+ANOTHER HAPPY ENDING</code></pre>
+          <p>Run the program in the IDE, type a line in the execution terminal, and press Enter to provide input.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section">
+      <h2>Arrays and comments</h2>
+      <p>Arrays are represented as Python lists and support indexed access.</p>
+      <pre><code>JEDI values[3] YOU ARE ON THIS COUNCIL {4, 8, 15};
+HELLO THERE ("%d", values[1]);</code></pre>
+      <p>
+        A line beginning with <code>DID YOU EVER HEAR THE TRAGEDY OF DARTH
+        PLAGUEIS THE WISE</code> is a comment; the rest of that line is ignored.
+      </p>
+    </section>
+
+    <p class="guide-footer"><a href="/">Open the PrequelScript IDE</a></p>
+  </main>
+</body>
+</html>

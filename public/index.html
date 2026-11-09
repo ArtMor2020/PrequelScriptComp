@@ -1,0 +1,56 @@
+<!-- Main IDE page: source editor, example picker, generated Python, and terminal. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrequelScript Web IDE</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Load Monaco Editor Loader -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.38.0/min/vs/loader.min.js"></script>
+</head>
+<body>
+  <header class="ide-header">
+    <h1>PrequelScript Web IDE</h1>
+    <div class="header-actions">
+      <a class="header-link" href="language.html">Language guide</a>
+      <button id="run-btn">Execute Order 66 (Run)</button>
+      <button id="stop-btn" disabled>Stop</button>
+    </div>
+  </header>
+
+  <main class="ide-container">
+    <section class="panel left-panel">
+      <div class="panel-section terminal-section">
+        <label for="terminal-input">Execution Terminal</label>
+        <pre id="stdout-output" aria-live="polite">Run your program to start.</pre>
+        <form id="terminal-form">
+          <label class="terminal-prompt" for="terminal-input">&gt;</label>
+          <input id="terminal-input" type="text" autocomplete="off" disabled
+            placeholder="Program input appears here; press Enter to send">
+          <button id="send-input-btn" type="submit" disabled>Send</button>
+        </form>
+      </div>
+
+      <div class="panel-section">
+        <label for="generated-code">Generated Python Code:</label>
+        <textarea id="generated-code" readonly placeholder="Compiled Python code will appear here..."></textarea>
+      </div>
+    </section>
+
+    <section class="panel right-panel">
+      <div class="source-toolbar">
+        <label for="monaco-editor-container">Source Code (PrequelScript):</label>
+        <label class="example-picker-label" for="example-picker">Load example
+          <select id="example-picker">
+            <option value="">Loading examples...</option>
+          </select>
+        </label>
+      </div>
+      <div id="monaco-editor-container"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
